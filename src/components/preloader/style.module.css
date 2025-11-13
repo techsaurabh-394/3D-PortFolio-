@@ -1,0 +1,44 @@
+.introduction {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-inline: 60px;
+  padding-bottom: 30px;
+  position: fixed;
+  z-index: 99;
+  background-color: hsl(222.2 84% 4.9%);
+}
+
+.introduction svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 300px);
+}
+
+.introduction svg path {
+  fill: hsl(222.2 84% 4.9%);
+}
+
+.introduction p {
+  display: flex;
+  color: hsl(210 40% 98%);
+  font-size: 10rem;
+  font-family: "Betatron", "Courier New", monospace;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.introduction .skipHint {
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  color: hsl(210 40% 98%);
+  font-size: 20px;
+  font-family: "Betatron", "Courier New", monospace;
+  opacity: 0.6;
+  z-index: 1;
+}
