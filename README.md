@@ -33,6 +33,7 @@ Welcome to my immersive 3D portfolio website! This project showcases my skills, 
 - **Experience**: Timeline of professional experience and roles
 - **Skills**: Interactive 3D keyboard showcasing technical skills
 - **Projects**: Portfolio of work with 3D project cards
+- **GitHub Showcase**: Published open-source repositories with optional build-time GitHub stats
 - **Blogs**: Latest blog posts from mernstackdev.com via WordPress API
 - **Contact**: Interactive contact form with 3D elements
 
@@ -111,6 +112,8 @@ Welcome to my immersive 3D portfolio website! This project showcases my skills, 
    > 
    > For Gmail setup, see the EmailJS documentation. The App Password should be added in EmailJS Dashboard, not in the `.env` file.
 
+   `GITHUB_TOKEN` is optional. Add it to `.env` to let the Vite server/build read repository stats using GitHub's authenticated API rate limit. It is used only by build tooling and is not included in the browser bundle.
+
 4. **Start the development server:**
 
    ```bash
@@ -158,7 +161,10 @@ src/
 │   ├── Hero.jsx
 │   ├── Navbar.jsx
 │   ├── SkillKeyboard.jsx
+│   ├── GitHubShowcase.jsx
 │   └── Works.jsx
+├── data/
+│   └── githubProjects.js # GitHub Showcase repo data
 ├── assets/            # Static assets
 │   ├── achievement/   # Achievement images
 │   ├── badge/        # Skill badges
@@ -193,6 +199,10 @@ src/
   live_link: "https://project-url.com",
 }
 ```
+
+### Adding a GitHub Showcase repository
+
+Add one object to `src/data/githubProjects.js`. Set `published: true` only after the repository is public and its link works; unpublished entries are not rendered or included in structured data. Stats and README availability are read during the Vite build or dev-server module load. If GitHub is unavailable or rate-limits the request, the static project cards still render without stats.
 
 ### Adding New Skills
 

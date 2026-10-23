@@ -249,7 +249,7 @@ const projects = [
 
 const socialLinks = {
   github: "https://github.com/techsaurabh-394",
-  linkedin: "https://linkedin.com/in/saurabh-pathak", // TODO: Replace with final LinkedIn URL
+  linkedin: "https://www.linkedin.com/in/tech-saurabh/",
   twitter: "https://x.com/Saurabh23272258",
   email: "saurabhpathak394@gmail.com",
 };

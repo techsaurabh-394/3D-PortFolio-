@@ -240,6 +240,12 @@ const Works = () => {
                 />
               ))}
           </div>
+          <a
+            href="#github"
+            className="mt-7 inline-flex min-h-11 items-center font-semibold text-[#8ec5ff] underline-offset-4 hover:underline focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+          >
+            Explore my open-source work
+          </a>
         </section>
       </div>
     </>

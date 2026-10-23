@@ -6,11 +6,18 @@ const siteName = "Saurabh Pathak | AI Engineer & Full-Stack Developer";
 const socialProfiles = [
   "https://github.com/techsaurabh-394",
   "https://x.com/Saurabh23272258",
-  "https://linkedin.com/in/saurabh-pathak",
+  "https://www.linkedin.com/in/tech-saurabh/",
   "https://mernstackdev.com",
 ];
 
-const SEO = ({ title, description, url = "/", isArticle = false, author }) => {
+const SEO = ({
+  title,
+  description,
+  url = "/",
+  isArticle = false,
+  author,
+  softwareProjects = [],
+}) => {
   const currentUrl = new URL(url, siteUrl).href;
   const imageUrl = `${siteUrl}/og-image.png`;
   const personSchema = {
@@ -57,11 +64,35 @@ const SEO = ({ title, description, url = "/", isArticle = false, author }) => {
     publisher: { "@type": "Person", name: "Saurabh Pathak", url: siteUrl },
     image: imageUrl,
   };
+  const softwareListSchema = softwareProjects.length
+    ? {
+        "@type": "ItemList",
+        itemListElement: softwareProjects.map((project, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@type": "SoftwareSourceCode",
+            name: project.name,
+            description: project.description,
+            codeRepository: `https://github.com/${project.repo}`,
+            programmingLanguage: project.stack.filter((item) =>
+              ["JavaScript", "Python", "TypeScript"].includes(item),
+            ),
+            author: {
+              "@type": "Person",
+              name: "Saurabh Pathak",
+              url: siteUrl,
+            },
+          },
+        })),
+      }
+    : null;
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       personSchema,
       websiteSchema,
+      ...(softwareListSchema ? [softwareListSchema] : []),
       ...(isArticle ? [articleSchema] : []),
     ],
   };
