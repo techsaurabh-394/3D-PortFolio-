@@ -3,35 +3,35 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const NAV_LINKS = [
-  { title: "home", href: "#hero", img: "/assets/nav-link-previews/home1.png" },
+  { title: "home", href: "/", img: "/assets/nav-link-previews/home1.png" },
   {
     title: "about",
-    href: "#about",
+    href: "/#about",
     img: "/assets/nav-link-previews/home1.png",
   },
   {
     title: "experience",
-    href: "#experience",
+    href: "/#experience",
     img: "/assets/nav-link-previews/experience.png",
   },
   {
     title: "skills",
-    href: "#skills",
+    href: "/#skills",
     img: "/assets/nav-link-previews/skills1.png",
   },
   {
     title: "project",
-    href: "#projects",
+    href: "/#projects",
     img: "/assets/nav-link-previews/projects1.png",
   },
   {
     title: "blogs",
-    href: "#blogs",
+    href: "/blogs",
     img: "/assets/nav-link-previews/blogs.png",
   },
   {
     title: "contact",
-    href: "#contact",
+    href: "/#contact",
     img: "/assets/nav-link-previews/contactus.png",
   },
 ];
@@ -108,9 +108,8 @@ const Navbar = () => {
 
   return (
     <motion.header
-      className={`z-30 fixed top-0 left-0 w-full transition-colors duration-500 ease-in  ${
-        scrolled ? "backdrop-blur-xl" : ""
-      } `}
+      className={`z-30 fixed top-0 left-0 w-full transition-colors duration-500 ease-in  ${scrolled ? "backdrop-blur-xl" : ""
+        } `}
       style={{
         background: scrolled ? "rgba(10,10,20,0.8)" : "transparent",
       }}
@@ -118,8 +117,8 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="flex items-center justify-between max-w-8xl my-2 mx-4 relative">
-        <a href="#hero" className="flex mx-6 items-center justify-center">
+      <div className="relative mx-4 my-2 flex items-center justify-between max-w-8xl">
+        <a href="#hero" className="mx-2 flex min-h-11 items-center justify-center sm:mx-6">
           <motion.span
             className="text-xl md:text-2xl font-bold text-white"
             style={{
@@ -137,8 +136,10 @@ const Navbar = () => {
         </a>
         <button
           onClick={() => setIsActive((v) => !v)}
-          className="flex items-center justify-center gap-3 m-0 p-0 h-6 bg-transparent text-base font-normal"
-          style={{ margin: window.innerWidth >= 600 ? "20px" : "15px" }}
+          aria-expanded={isActive}
+          aria-controls="site-navigation"
+          aria-label={isActive ? "Close navigation menu" : "Open navigation menu"}
+          className="flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-lg bg-transparent px-2 text-base font-normal transition-colors hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 sm:gap-3 sm:px-3"
         >
           <div
             className="relative flex items-center text-[22px]"
@@ -205,6 +206,7 @@ const Navbar = () => {
         </button>
       </div>
       <motion.div
+        id="site-navigation"
         variants={height}
         initial="initial"
         animate={isActive ? "enter" : "exit"}
@@ -214,16 +216,16 @@ const Navbar = () => {
         <AnimatePresence>
           {isActive && (
             <motion.div
-              className="flex flex-row justify-between items-center w-full max-w-8xl mx-auto relative min-h-[60vh]"
-              style={{ minHeight: 600 }}
+              className="relative mx-auto flex min-h-[70vh] w-full max-w-8xl flex-col items-start justify-center px-4 md:min-h-[60vh] md:flex-row md:items-center md:justify-between md:px-0"
+              style={{ minHeight: "min(80vh, 700px)" }}
             >
-              <div className="flex flex-wrap items-start gap-1 w-2/3 pl-8">
+              <div className="flex w-full flex-col items-start gap-1 md:w-2/3 md:pl-8">
                 {NAV_LINKS.map((link, idx) => (
-                  <a
+                  <Link
                     key={link.title}
-                    href={link.href}
-                    className="group cursor-pointer rounded-lg px-3 py-2 text-5xl md:text-7xl font-extrabold uppercase transition-all duration-200 whitespace-nowrap text-left relative"
-                    style={{ minHeight: "4.5rem" }}
+                    to={link.href}
+                    className="group relative min-h-11 cursor-pointer whitespace-nowrap rounded-lg px-2 py-1 text-3xl font-extrabold uppercase text-left transition-all duration-200 sm:text-5xl md:px-3 md:py-2 md:text-7xl"
+                    style={{ minHeight: "3rem" }}
                     onMouseOver={() => {
                       setSelectedIdx(idx);
                       setHovering(true);
@@ -268,7 +270,7 @@ const Navbar = () => {
                       }
                       transition={{ duration: 0.3, ease: [0.76, 0, 0.24, 1] }}
                     />
-                  </a>
+                  </Link>
                 ))}
               </div>
               {isActive && (
@@ -276,7 +278,7 @@ const Navbar = () => {
                   variants={opacity}
                   initial="initial"
                   animate={hovering ? "open" : "closed"}
-                  className="hidden md:flex items-center justify-start w-1/3 h-full"
+                  className="hidden h-full w-1/3 items-center justify-start md:flex"
                   style={{ minHeight: 200 }}
                 >
                   <img

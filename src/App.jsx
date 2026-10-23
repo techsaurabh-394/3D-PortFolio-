@@ -1,19 +1,14 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import {
-  About,
-  Experience,
-  Contact,
-  Blogs,
-  Hero,
-  Navbar,
-  Preloader,
-  StarsCanvas,
-  Works,
-} from "./components";
+import { Navbar, Preloader } from "./components";
 import EasterEggs from "./components/EasterEggs";
 import ElasticCursor from "./components/ElasticCursor";
-import SkillKeyboard from "./components/SkillKeyboard";
+import Home from "./pages/Home";
+import AboutSaurabh from "./pages/AboutSaurabh";
+import BuildingTravelBuddiz from "./pages/BuildingTravelBuddiz";
+import MyDeveloperStack from "./pages/MyDeveloperStack";
+import PersonalBranding from "./pages/PersonalBranding";
+import BlogsPage from "./pages/BlogsPage";
 
 const App = () => {
   return (
@@ -25,19 +20,15 @@ const App = () => {
         >
           <ElasticCursor />
           <EasterEggs />
-          <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-            <Navbar />
-            <Hero />
-          </div>
-          <StarsCanvas />
-          <About />
-          <Experience />
-          <SkillKeyboard />
-          <Works />
-          <Blogs />
-          <div className="relative z-0">
-            <Contact />
-          </div>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/blogs" element={<BlogsPage />} />
+            <Route path="/blog/about-saurabh" element={<AboutSaurabh />} />
+            <Route path="/blog/building-travelbuddiz" element={<BuildingTravelBuddiz />} />
+            <Route path="/blog/my-developer-stack" element={<MyDeveloperStack />} />
+            <Route path="/blog/personal-branding" element={<PersonalBranding />} />
+          </Routes>
         </div>
       </BrowserRouter>
     </Preloader>

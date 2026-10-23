@@ -5,7 +5,7 @@ export const useDevToolsOpen = () => {
   const [isDevToolsOpen, setIsDevToolsOpen] = useState(false);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (!import.meta.env.DEV || typeof window === "undefined") return;
     addListener((isOpen) => {
       if (isOpen) {
         setIsDevToolsOpen(true);

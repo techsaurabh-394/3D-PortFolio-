@@ -23,8 +23,9 @@ export const usePreloader = () => {
 const LOADING_TIME = 2.5;
 
 function Preloader({ children, disabled = false }) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [loadingPercent, setLoadingPercent] = useState(0);
+  const shouldSkip = disabled || (typeof window !== "undefined" && window.location.search.includes("skipPreloader"));
+  const [isLoading, setIsLoading] = useState(!shouldSkip);
+  const [loadingPercent, setLoadingPercent] = useState(shouldSkip ? 100 : 0);
   const loadingTween = useRef();
 
   const bypassLoading = () => {
@@ -36,7 +37,7 @@ function Preloader({ children, disabled = false }) {
   const loadingPercentRef = useRef({ value: 0 });
 
   useEffect(() => {
-    if (disabled) {
+    if (shouldSkip) {
       setIsLoading(false);
       return;
     }

@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
-  const typedItems = ["Software Developer", "Tech Blogger", "AI Enthusiast"];
+  const typedItems = ["AI Engineer", "Full-Stack Developer", "AI Agents & MCP Specialist"];
   const [itemIndex, setItemIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
@@ -70,7 +70,7 @@ const Hero = () => {
               |
             </span>
             <br />
-            <b>Bring on the challenges, I'm ready to soak up knowledge!</b>
+            <b>Building intelligent systems that ship — from AI agents to production apps.</b>
           </p>
         </div>
       </div>

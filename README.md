@@ -316,6 +316,10 @@ Contributions are welcome! Here's how you can help:
 - Add meaningful commit messages
 - Test across different devices
 
+The DevTools easter egg is enabled only in Vite development builds. DevTools
+detection is heuristic and must never be used as an access-control or security
+mechanism; keep the detector disabled in production.
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

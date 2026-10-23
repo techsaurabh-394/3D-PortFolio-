@@ -39,6 +39,11 @@ export const SkillNames = {
   UNET: "unet",
   TRANSFORMERS: "transformers",
   NLP: "nlp",
+  MCP: "mcp",
+  RAG: "rag",
+  MULTI_AGENT: "multi_agent",
+  AZURE: "azure",
+  CICD: "cicd",
 };
 
 // Skill type (for reference)
@@ -395,5 +400,50 @@ export const SKILLS = {
       "Natural Language Processing techniques for text analysis, sentiment analysis, and language understanding.",
     color: "#9b59b6",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  mcp: {
+    id: 40,
+    name: "mcp",
+    label: "Model Context Protocol",
+    shortDescription:
+      "An open protocol for connecting AI agents to tools, data sources, and other agents via standardised interfaces.",
+    color: "#10b981",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  },
+  rag: {
+    id: 41,
+    name: "rag",
+    label: "RAG Pipelines",
+    shortDescription:
+      "Retrieval-Augmented Generation — combining vector search with LLMs to ground responses in real data.",
+    color: "#6366f1",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  multi_agent: {
+    id: 42,
+    name: "multi_agent",
+    label: "Multi-Agent Workflows",
+    shortDescription:
+      "Orchestrating multiple AI agents that collaborate, delegate, and communicate to complete complex tasks.",
+    color: "#f59e0b",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  },
+  azure: {
+    id: 43,
+    name: "azure",
+    label: "Microsoft Azure",
+    shortDescription:
+      "A cloud computing platform by Microsoft for building, deploying, and managing applications and services.",
+    color: "#0078d4",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+  },
+  cicd: {
+    id: 44,
+    name: "cicd",
+    label: "CI/CD",
+    shortDescription:
+      "Continuous Integration and Continuous Deployment pipelines for automated testing, building, and deploying software.",
+    color: "#22c55e",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
   },
 };

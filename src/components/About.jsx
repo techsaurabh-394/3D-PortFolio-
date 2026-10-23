@@ -47,20 +47,30 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Hi, I’m Saurabh Pathak — a Software Developer, AI Enthusiast, and Tech Blogger. I enjoy turning ideas into impactful digital solutions using technologies like React, Node.js, and MongoDB. When I’m not coding, I write at mernstackdev.com
-, where I simplify complex tech concepts for developers around the world.
+        Hi, I'm Saurabh Pathak — an AI Engineer and Full-Stack Developer
+        building at the intersection of intelligent agents and production-grade
+        web applications. At Sprilio Tech, I ship React, Next.js, and Node.js
+        apps backed by MongoDB and Firebase, design REST APIs with JWT &amp; RBAC
+        that cut response times by 35%, and containerise microservices with
+        Docker. I also write at{" "}
+        <a
+          href="https://mernstackdev.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#8ec5ff] underline"
+        >
+          mernstackdev.com
+        </a>
+        , where 200+ articles reach 10K+ monthly readers simplifying MERN stack
+        and modern web concepts.
       </motion.p>
-      <button
-        className="mt-10 px-6 py-3 text-white bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-md shadow-md hover:bg-gradient-to-r hover:from-cyan-600 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
-        onClick={() =>
-          window.open(
-            "https://drive.google.com/file/d/1OMcyThadCOF_-uL8XVXJMB_ey5Dl9fEy/view?usp=drivesdk",
-            "_blank"
-          )
-        }
+      <a
+        href="/Saurabh_Pathak_Resume.pdf"
+        download="Saurabh_Pathak_Resume.pdf"
+        className="mt-10 inline-flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-indigo-500 px-6 py-3 text-white shadow-md transition-colors hover:from-cyan-600 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
       >
         <span className="font-semibold flex gap-1.5 items-center"><RiBriefcase4Fill />Download Resume</span>
-      </button>
+      </a>
       <div className="mt-12 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />

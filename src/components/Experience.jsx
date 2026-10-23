@@ -44,6 +44,19 @@ const ExperienceCard = ({ experience }) => {
         </p>
       </div>
 
+      {experience.tags?.length > 0 && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {experience.tags.map((tag) => (
+            <span
+              key={`${experience.company_name}-${tag}`}
+              className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-[#cbd5e1]"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
           <li
@@ -54,6 +67,22 @@ const ExperienceCard = ({ experience }) => {
           </li>
         ))}
       </ul>
+
+      {experience.metrics?.length > 0 && (
+        <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-3">
+          {experience.metrics.map((metric) => (
+            <div
+              key={`${experience.company_name}-${metric.label}`}
+              className="rounded-xl border border-cyan-300/15 bg-cyan-300/[0.05] px-3 py-2"
+            >
+              <p className="text-sm font-bold text-cyan-200">{metric.value}</p>
+              <p className="mt-1 text-[11px] leading-snug text-secondary">
+                {metric.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
       
       {experience.blogLink && (
         <div className="mt-5">
@@ -113,4 +142,3 @@ const Experience = () => {
 };
 
 export default SectionWrapper(Experience, "experience");
-
