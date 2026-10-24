@@ -8,6 +8,7 @@ import React, {
 } from "react";
 import { cn } from "../utils/cn";
 import { useMouse } from "../utils/useMouse";
+import useMediaQuery from "../utils/useMediaQuery";
 
 // Gsap Ticker Function
 function useTicker(callback, paused) {
@@ -53,9 +54,7 @@ function getRekt(el) {
 const CURSOR_DIAMETER = 50;
 
 function ElasticCursor() {
-  // Detect if mobile (simple check)
-  const isMobile =
-    window.matchMedia && window.matchMedia("(max-width: 768px)").matches;
+  const isMobile = useMediaQuery("(max-width: 768px)");
   const jellyRef = useRef(null);
   const [isHovering, setIsHovering] = useState(false);
   const { x, y } = useMouse();

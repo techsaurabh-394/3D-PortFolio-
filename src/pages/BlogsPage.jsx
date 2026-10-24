@@ -1,5 +1,6 @@
 import React from "react";
-import { Blogs, Contact, StarsCanvas } from "../components";
+import Blogs from "../components/Blogs";
+import Contact from "../components/Contact";
 import SEO from "../components/SEO";
 
 const BlogsPage = () => {
@@ -11,8 +12,6 @@ const BlogsPage = () => {
                 url="/blogs"
                 isArticle={false}
             />
-            <StarsCanvas />
-
             <div className="relative z-0 min-h-[60vh]">
                 <Blogs />
             </div>

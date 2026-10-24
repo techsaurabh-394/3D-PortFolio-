@@ -4,14 +4,14 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { textVariant, fadeIn } from "../utils/motion";
 import SEO from "../components/SEO";
-import aboutHero from "../assets/blogs/about_hero.png";
+import saurabhPortrait from "../assets/saurabh-pathak.jpg";
 
 const AboutSaurabh = () => {
     return (
         <div className="bg-[#0a0c14] min-h-screen pt-24 pb-12">
             <SEO
-                title="Saurabh Pathak | SDE, Founder of TravelBuddiz & Tech Blogger"
-                description="The definitive biography of Saurabh Pathak: From software engineering excellence to building TravelBuddiz and mentoring developers via MERNStackDev.com."
+                title="Saurabh Pathak | SDE, Founder of Rahidera & Tech Blogger"
+                description="The definitive biography of Saurabh Pathak: From software engineering excellence to building Rahidera and mentoring developers via MERNStackDev.com."
                 url="/blog/about-saurabh"
                 isArticle={true}
             />
@@ -36,19 +36,23 @@ const AboutSaurabh = () => {
                             In the rapidly evolving landscape of 2026, where the lines between the digital and physical worlds are increasingly blurred, Saurabh Pathak stands as more than just a software engineer. He is a builder, a founder, and a digital architect dedicated to one primary goal: creating technology that fosters genuine human connection. Based in the heart of India's thriving tech ecosystem, Saurabh has carved a unique niche for himself as a Software Development Engineer (SDE), freelance consultant, and a thought leader in the MERN and Next.js communities.
                         </p>
                         <p>
-                            His journey is not one of linear progression but of iterative discovery. From his early days of curiosity about the fundamental logic of the web to his current role as the visionary behind <span className="text-[#8ec5ff] font-bold">TravelBuddiz</span>, Saurabh’s professional identity is defined by a relentless drive to solve complex problems through elegant, scalable, and highly performant solutions. Whether he is optimizing a React component for 60FPS animations, architecting a secure backend with Node.js, or documenting complex architectural patterns on <a href="https://mernstackdev.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline font-medium">mernstackdev.com</a>, his work is underpinned by a commitment to excellence and a deep understanding of user psychology.
+                            His journey is not one of linear progression but of iterative discovery. From his early days of curiosity about the fundamental logic of the web to his current role as the visionary behind <span className="text-[#8ec5ff] font-bold">Rahidera</span>, Saurabh’s professional identity is defined by a relentless drive to solve complex problems through elegant, scalable, and highly performant solutions. Whether he is optimizing a React component for 60FPS animations, architecting a secure backend with Node.js, or documenting complex architectural patterns on <a href="https://mernstackdev.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline font-medium">mernstackdev.com</a>, his work is underpinned by a commitment to excellence and a deep understanding of user psychology.
                         </p>
                     </section>
 
                     {/* IMAGE SECTION */}
                     <div className="w-full h-[300px] md:h-[500px] bg-[#111522] rounded-3xl overflow-hidden shadow-2xl relative group border border-white/10">
                         <img
-                            src={aboutHero}
-                            alt="Saurabh Pathak Digital Workspace"
-                            className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                            src={saurabhPortrait}
+                            alt="Saurabh Pathak outdoors in the mountains"
+                            width="900"
+                            height="1200"
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full h-full object-cover object-[center_72%] opacity-90 group-hover:scale-105 transition-transform duration-700 motion-reduce:transition-none"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0c14] via-transparent to-transparent opacity-60"></div>
-                        <p className="absolute bottom-6 left-6 text-white font-medium text-sm md:text-base">Engineering High-Performance Digital Solutions</p>
+                        <p className="absolute bottom-6 left-6 text-white font-medium text-sm md:text-base">Saurabh Pathak — AI Engineer &amp; Full-Stack Developer</p>
                     </div>
 
                     {/* SECTION 2: EARLY INSPIRATION & THE SPARK OF CREATION */}
@@ -76,11 +80,11 @@ const AboutSaurabh = () => {
                         </p>
                     </section>
 
-                    {/* SECTION 4: FROM INTERN TO SDE - THE PROFESSIONAL EVOLUTION */}
+                    {/* SECTION 4: PROFESSIONAL ENGINEERING EXPERIENCE */}
                     <section id="professional-career" className="space-y-6">
-                        <h2 className="text-white text-3xl font-bold border-b border-white/10 pb-4 tracking-tight">The Professional Evolution: From Intern to SDE Excellence</h2>
+                        <h2 className="text-white text-3xl font-bold border-b border-white/10 pb-4 tracking-tight">Professional Engineering Experience</h2>
                         <p>
-                            Transitioning from a curious student to a professional Software Development Engineer was a journey of rigorous discipline and high-stakes problem-solving. Saurabh’s professional career is a testament to his ability to adapt and thrive in demanding environments. His early experiences as an intern provided him with a frontline view of the software development lifecycle (SDLC) at scale. He learned the importance of version control, code reviews, and the collaborative nature of enterprise-level engineering.
+                            Saurabh’s professional work centers on practical problem-solving and building reliable software. Across his engineering experience, he applies core practices such as version control, code reviews, and collaboration throughout the software development lifecycle.
                         </p>
                         <p>
                             As he moved into full-time roles, his focus shifted from simply "making things work" to "making things work well." This meant deep-diving into performance optimization, exploring the nuances of server-side rendering (SSR) with Next.js, and implementing robust CI/CD pipelines to ensure the reliability of his deployments. He became known for his ability to jump into a legacy codebase, identify bottlenecks, and refactor code for better maintainability and performance without disrupting the user experience.
@@ -101,17 +105,17 @@ const AboutSaurabh = () => {
                         </p>
                     </section>
 
-                    {/* SECTION 6: THE BIRTH OF TRAVELBUDDIZ - THE FOUNDER'S JOURNEY */}
-                    <section id="travelbuddiz" className="space-y-6">
-                        <h2 className="text-white text-3xl font-bold border-b border-white/10 pb-4 tracking-tight">TravelBuddiz: Engineering the Future of Collaborative Exploration</h2>
+                    {/* SECTION 6: RAHIDERA - THE FOUNDER'S JOURNEY */}
+                    <section id="rahidera" className="space-y-6">
+                        <h2 className="text-white text-3xl font-bold border-b border-white/10 pb-4 tracking-tight">Rahidera (formerly TravelBuddiz): Building Local Travel Connections</h2>
                         <p>
-                            The culmination of Saurabh’s engineering expertise and his passion for building impact-driven products is <span className="text-[#8ec5ff] font-bold">TravelBuddiz</span>. Founded with the mission to solve the fragmentation and lack of trust in the tour planning industry, TravelBuddiz is a testament to what is possible when deep technical knowledge meets true domain passion.
+                            The culmination of Saurabh’s engineering expertise and his passion for building impact-driven products is <span className="text-[#8ec5ff] font-bold">Rahidera</span>. Founded with the mission to solve the fragmentation and lack of trust in the tour planning industry, Rahidera is a testament to what is possible when deep technical knowledge meets true domain passion.
                         </p>
                         <p>
-                            Building TravelBuddiz was more than just a technical challenge; it was a masterclass in full-stack architecture. Saurabh designed the platform to be a two-sided marketplace, connecting local trip planners and groups with travelers seeking authentic experiences. The engineering behind the platform is robust, utilizing a complex MongoDB schema to manage dynamic trip itineraries, a secure authentication layer for verified guides, and a real-time booking engine that handles availability and payments across different time zones.
+                            Building Rahidera was more than just a technical challenge; it was a masterclass in full-stack architecture. Saurabh designed the platform to be a two-sided marketplace, connecting local trip planners and groups with travelers seeking authentic experiences. The engineering behind the platform is robust, utilizing a complex MongoDB schema to manage dynamic trip itineraries, a secure authentication layer for verified guides, and a real-time booking engine that handles availability and payments across different time zones.
                         </p>
                         <p>
-                            But for Saurabh, TravelBuddiz is more than just code. It's about data-driven trust. He implemented sophisticated rating and review systems, verification badges, and a "Trust Hub" for publishers to ensure that every traveler feels safe and confident. The platform serves as a case study in how modern web technologies like Next.js can be used to build SEO-optimized, lightning-fast discovery platforms that scale effortlessly.
+                            But for Saurabh, Rahidera is more than just code. It's about data-driven trust. He implemented sophisticated rating and review systems, verification badges, and a "Trust Hub" for publishers to ensure that every traveler feels safe and confident. The platform serves as a case study in how modern web technologies like Next.js can be used to build SEO-optimized, lightning-fast discovery platforms that scale effortlessly.
                         </p>
                     </section>
 
@@ -169,7 +173,7 @@ const AboutSaurabh = () => {
                     <section id="future" className="space-y-6">
                         <h2 className="text-white text-3xl font-bold border-b border-white/10 pb-4 tracking-tight">The Road Ahead: Building for the Next Digital Era</h2>
                         <p>
-                            Looking forward, Saurabh’s vision is to continue pushing the boundaries of what is possible on the web. He is particularly excited about the potential of WebGPU for high-performance 3D graphics in the browser and the rise of edge computing for reducing latency to near-zero levels. He plans to continue iterating on TravelBuddiz, expanding its AI capabilities and building it into a global travel community.
+                            Looking forward, Saurabh’s vision is to continue pushing the boundaries of what is possible on the web. He is particularly excited about the potential of WebGPU for high-performance 3D graphics in the browser and the rise of edge computing for reducing latency to near-zero levels. He plans to continue iterating on Rahidera, expanding its AI capabilities and building it into a global travel community.
                         </p>
                     </section>
 
@@ -195,7 +199,7 @@ const AboutSaurabh = () => {
                     {/* FINAL SEO FOOTER */}
                     <div className="mt-20 pt-8 border-t border-white/10 text-center">
                         <p className="text-secondary text-sm italic font-normal">
-                            Saurabh Pathak | SDE | TravelBuddiz | MERNStackDev.com | Based in India - Engineering Global Solutions.
+                            Saurabh Pathak | SDE | Rahidera | MERNStackDev.com | Based in India - Engineering Global Solutions.
                         </p>
                     </div>
                 </motion.div>

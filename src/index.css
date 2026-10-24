@@ -22,8 +22,33 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
   color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.depth-card {
+  transform-style: preserve-3d;
+  transition:
+    transform 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .depth-card:hover {
+    transform: perspective(900px) rotateX(1deg) rotateY(-1deg) translateY(-4px);
+    box-shadow: 0 20px 48px -28px rgba(80, 155, 255, 0.55);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  * {
+    scroll-behavior: auto !important;
+  }
 }
 
 .hash-span {

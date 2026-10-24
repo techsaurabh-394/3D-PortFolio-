@@ -72,7 +72,7 @@ const PersonalBranding = () => {
                             In 2026, SEO has evolved into Generative Engine Optimization (GEO). It's no longer enough to rank for keywords; you must provide exhaustive, high-quality answers that AI agents like Gemini and ChatGPT can synthesize for their users. My branding strategy focuses on <span className="text-white font-bold">Content Density and Structural Clarity</span>.
                         </p>
                         <p>
-                            By creating massive, 2000+ word "Ultimate Guides" on my portfolio and blog, I am providing the "ground truth" data that search engines crave. I use semantic HTML, structured JSON-LD data (Person, Article, TechArticle schema), and clear hierarchical headers to ensure that when someone asks an AI "Who is Saurabh Pathak?" or "How was TravelBuddiz built?", the answer is accurate, comprehensive, and authoritative. This is how you dominate the search results: by being the most helpful and detailed source of information on your chosen topics.
+                            By creating massive, 2000+ word "Ultimate Guides" on my portfolio and blog, I am providing the "ground truth" data that search engines crave. I use semantic HTML, structured JSON-LD data (Person, Article, TechArticle schema), and clear hierarchical headers to ensure that when someone asks an AI "Who is Saurabh Pathak?" or "How was Rahidera built?", the answer is accurate, comprehensive, and authoritative. This is how you dominate the search results: by being the most helpful and detailed source of information on your chosen topics.
                         </p>
                     </section>
 
@@ -85,15 +85,15 @@ const PersonalBranding = () => {
                         <ul className="list-disc list-inside space-y-4 ml-4">
                             <li><span className="text-white font-bold">LinkedIn:</span> My professional headquarters. Here, I share high-level insights on engineering management, startup growth, and SDE career progression. It's about building trust with peers and industry leaders.</li>
                             <li><span className="text-white font-bold">X (formerly Twitter):</span> The pulse of the dev community. I use X for real-time engagement, sharing quick technical tips, and participating in the global conversation around the MERN stack and Next.js evolution.</li>
-                            <li><span className="text-white font-bold">Instagram:</span> The human side of the builder. Through my Instagram journey, I share the behind-the-scenes reality of being a founder and developer—the late nights, the workspace setups, and the travel experiences that fuel TravelBuddiz.</li>
+                            <li><span className="text-white font-bold">Instagram:</span> The human side of the builder. Through my Instagram journey, I share the behind-the-scenes reality of being a founder and developer—the late nights, the workspace setups, and the travel experiences that fuel Rahidera.</li>
                         </ul>
                     </section>
 
-                    {/* SECTION 5: PROOF OF WORK - THE TRAVELBUDDIZ CASE STUDY */}
+                    {/* SECTION 5: PROOF OF WORK - THE RAHIDERA CASE STUDY */}
                     <section id="proof-of-work" className="space-y-6">
                         <h2 className="text-white text-3xl font-bold border-b border-white/10 pb-4 tracking-tight">Proof of Work: Why Projects Trump Resumes</h2>
                         <p>
-                            A personal brand without a product is just noise. The most powerful element of my branding is <span className="text-[#8ec5ff] font-bold">TravelBuddiz</span>. It serves as a living case study of my technical and entrepreneurial capabilities. When I talk about scalability, I can point to the TravelBuddiz architecture. When I talk about UX, I can show the TravelBuddiz interface.
+                            A personal brand without a product is just noise. The most powerful element of my branding is <span className="text-[#8ec5ff] font-bold">Rahidera</span>. It serves as a living case study of my technical and entrepreneurial capabilities. When I talk about scalability, I can point to the Rahidera architecture. When I talk about UX, I can show the Rahidera interface.
                         </p>
                         <p>
                             For any developer looking to build a brand, my advice is: <span className="italic">Build something real.</span> Solve a problem you care about and document the process. The mistakes you make and the solutions you find while building a real-world application are far more valuable to your brand than any certificate or course completion badge.
@@ -126,7 +126,7 @@ const PersonalBranding = () => {
                     <section id="build-in-public" className="space-y-6">
                         <h2 className="text-white text-3xl font-bold border-b border-white/10 pb-4 tracking-tight">Radical Transparency: The Power of Building in Public</h2>
                         <p>
-                            A core tenet of my personal branding strategy is the "Build in Public" movement. I don't just show the finished product; I show the messy Middle. I share the failed database migrations, the performance bottlenecks I couldn't solve for days, and the design iterations for TravelBuddiz.
+                            A core tenet of my personal branding strategy is the "Build in Public" movement. I don't just show the finished product; I show the messy Middle. I share the failed database migrations, the performance bottlenecks I couldn't solve for days, and the design iterations for Rahidera.
                         </p>
                         <p>
                             Why? Because transparency is the ultimate proof of expertise. A finished product might look easy, but showing the struggle demonstrates your true problem-solving capabilities. It makes the brand relatable and human. It invites the community into your journey, turning "followers" into "buddies." This openness has been the single biggest driver of high-quality connections on X and LinkedIn.

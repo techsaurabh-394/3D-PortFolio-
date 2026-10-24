@@ -15,18 +15,23 @@ const NAV_LINKS = [
     img: "/assets/nav-link-previews/experience.png",
   },
   {
+    title: "education",
+    href: "/#education",
+    img: "/assets/nav-link-previews/experience.png",
+  },
+  {
     title: "skills",
     href: "/#skills",
     img: "/assets/nav-link-previews/skills1.png",
   },
   {
-    title: "project",
-    href: "/#projects",
+    title: "github",
+    href: "/#github",
     img: "/assets/nav-link-previews/projects1.png",
   },
   {
-    title: "github",
-    href: "/#github",
+    title: "project",
+    href: "/#projects",
     img: "/assets/nav-link-previews/projects1.png",
   },
   {

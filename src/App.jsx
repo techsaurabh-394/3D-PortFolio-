@@ -1,37 +1,59 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { lazy, Suspense } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import { Navbar, Preloader } from "./components";
+import Navbar from "./components/Navbar";
 import EasterEggs from "./components/EasterEggs";
 import ElasticCursor from "./components/ElasticCursor";
-import Home from "./pages/Home";
-import AboutSaurabh from "./pages/AboutSaurabh";
-import BuildingTravelBuddiz from "./pages/BuildingTravelBuddiz";
-import MyDeveloperStack from "./pages/MyDeveloperStack";
-import PersonalBranding from "./pages/PersonalBranding";
-import BlogsPage from "./pages/BlogsPage";
+
+const Home = lazy(() => import("./pages/Home"));
+const BlogsPage = lazy(() => import("./pages/BlogsPage"));
+const AboutSaurabh = lazy(() => import("./pages/AboutSaurabh"));
+const BuildingRahidera = lazy(() => import("./pages/BuildingRahidera"));
+const MyDeveloperStack = lazy(() => import("./pages/MyDeveloperStack"));
+const PersonalBranding = lazy(() => import("./pages/PersonalBranding"));
 
 const App = () => {
   return (
-    <Preloader>
-      <BrowserRouter>
-        <div
-          className="relative z-0"
-          style={{ backgroundColor: "hsl(222.2 84% 4.9%)" }}
+    <BrowserRouter>
+      <div
+        className="relative z-0"
+        style={{ backgroundColor: "hsl(222.2 84% 4.9%)" }}
+      >
+        <ElasticCursor />
+        <EasterEggs />
+        <Navbar />
+        <Suspense
+          fallback={
+            <main
+              className="min-h-screen bg-[#0a0c14]"
+              aria-label="Loading page"
+            />
+          }
         >
-          <ElasticCursor />
-          <EasterEggs />
-          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blogs" element={<BlogsPage />} />
             <Route path="/blog/about-saurabh" element={<AboutSaurabh />} />
-            <Route path="/blog/building-travelbuddiz" element={<BuildingTravelBuddiz />} />
-            <Route path="/blog/my-developer-stack" element={<MyDeveloperStack />} />
-            <Route path="/blog/personal-branding" element={<PersonalBranding />} />
+            <Route
+              path="/blog/building-rahidera"
+              element={<BuildingRahidera />}
+            />
+            <Route
+              path="/blog/building-travelbuddiz"
+              element={<Navigate to="/blog/building-rahidera" replace />}
+            />
+            <Route
+              path="/blog/my-developer-stack"
+              element={<MyDeveloperStack />}
+            />
+            <Route
+              path="/blog/personal-branding"
+              element={<PersonalBranding />}
+            />
           </Routes>
-        </div>
-      </BrowserRouter>
-    </Preloader>
+        </Suspense>
+      </div>
+    </BrowserRouter>
   );
 };
 

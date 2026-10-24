@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import React from "react";
 import { Tilt } from "react-tilt";
 
@@ -20,13 +20,15 @@ const ProjectCard = ({
   featured,
   projectType,
 }) => {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.12, 0.65)}>
       <Tilt
         options={{
-          max: 45,
+          max: prefersReducedMotion ? 0 : 10,
           scale: 1,
-          speed: 450,
+          speed: 350,
         }}
         className={`bg-[#111522] p-5 rounded-2xl sm:w-[360px] w-full relative ${
           featured
@@ -194,32 +196,6 @@ const Works = () => {
           </motion.span>
         </div>
 
-        <section className="mt-16" aria-labelledby="freelance-projects-heading">
-          <div className="mb-7">
-            <h3
-              id="freelance-projects-heading"
-              className="text-2xl font-bold text-white sm:text-3xl"
-            >
-              Freelance &amp; Client Work
-            </h3>
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-secondary sm:text-base">
-              Websites and digital experiences built for client brands and
-              businesses.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-7">
-            {projects
-              .filter((project) => project.projectType === "Freelance")
-              .map((project, index) => (
-                <ProjectCard
-                  key={project.name}
-                  index={index}
-                  {...project}
-                />
-              ))}
-          </div>
-        </section>
-
         <section className="mt-16" aria-labelledby="selected-projects-heading">
           <div className="mb-7">
             <h3
@@ -246,6 +222,32 @@ const Works = () => {
           >
             Explore my open-source work
           </a>
+        </section>
+
+        <section className="mt-16" aria-labelledby="freelance-projects-heading">
+          <div className="mb-7">
+            <h3
+              id="freelance-projects-heading"
+              className="text-2xl font-bold text-white sm:text-3xl"
+            >
+              Freelance &amp; Client Work
+            </h3>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-secondary sm:text-base">
+              Websites and digital experiences built for client brands and
+              businesses.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-7">
+            {projects
+              .filter((project) => project.projectType === "Freelance")
+              .map((project, index) => (
+                <ProjectCard
+                  key={project.name}
+                  index={index}
+                  {...project}
+                />
+              ))}
+          </div>
         </section>
       </div>
     </>

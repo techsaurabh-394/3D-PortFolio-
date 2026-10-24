@@ -1,13 +1,63 @@
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import React, { useRef, useState } from "react";
+import React, { lazy, Suspense, useEffect, useRef, useState } from "react";
 
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
 import soundEffects from "../utils/soundEffects";
-import { EarthCanvas } from "./canvas";
 import Toast from "./ui/toast";
+
+const EarthCanvas = lazy(() => import("./canvas/Earth"));
+
+const DeferredEarthCanvas = () => {
+  const containerRef = useRef(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    if (!("IntersectionObserver" in window)) {
+      setShouldLoad(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoad(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={containerRef} className="h-full min-h-[300px] w-full">
+      {shouldLoad ? (
+        <Suspense
+          fallback={
+            <div className="grid h-full min-h-[300px] place-items-center rounded-2xl bg-[#111522] text-sm text-secondary">
+              Loading Earth visualization…
+            </div>
+          }
+        >
+          <EarthCanvas />
+        </Suspense>
+      ) : (
+        <div
+          aria-hidden="true"
+          className="h-full min-h-[300px] rounded-2xl bg-[radial-gradient(circle_at_50%_45%,rgba(34,211,238,0.16),transparent_42%),linear-gradient(145deg,#0b1020,#111522_55%,#101c2e)]"
+        />
+      )}
+    </div>
+  );
+};
 
 const Contact = () => {
   const formRef = useRef();
@@ -142,7 +192,7 @@ const Contact = () => {
         <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-6 lg:gap-10 overflow-hidden text-white px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={slideIn("left", "tween", 0.2, 1)}
-            className="flex-[0.75] w-full xl:w-[40rem] bg-[#111522] p-4 sm:p-6 lg:p-8 rounded-2xl"
+            className="depth-card flex-[0.75] w-full rounded-2xl bg-[#111522] p-4 sm:p-6 lg:w-[40rem] lg:p-8"
           >
             <p className={`text-[#8ec5ff] ${styles.sectionSubText}`}>
               Get in touch
@@ -240,7 +290,7 @@ const Contact = () => {
             variants={slideIn("right", "tween", 0.2, 1)}
             className="xl:flex-1 my-auto h-[300px] sm:h-[350px] md:h-[450px] lg:h-[550px] w-full"
           >
-            <EarthCanvas />
+            <DeferredEarthCanvas />
           </motion.div>
         </div>
       </div>

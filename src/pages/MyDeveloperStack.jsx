@@ -83,7 +83,7 @@ const MyDeveloperStack = () => {
                             The 'M' in MERN—MongoDB—has scaled with the industry. I utilize **MongoDB Atlas** for its serverless capabilities and global distribution. For a product builder, the schema-less nature of MongoDB is an incredible asset during the early stages of product development, allowing for rapid iteration without the friction of complex migrations.
                         </p>
                         <p>
-                            However, as a system grows, I implement strict validation layers and indexing strategies to ensure that the flexibility doesn't turn into chaos. I also utilize **Redis** for extreme-performance caching. By moving frequently accessed data to an in-memory store at the edge, I can reduce database load and provide users with a near-instant experience for features like the TravelBuddiz booking status or real-time search results.
+                            However, as a system grows, I implement strict validation layers and indexing strategies to ensure that the flexibility doesn't turn into chaos. I also utilize **Redis** for extreme-performance caching. By moving frequently accessed data to an in-memory store at the edge, I can reduce database load and provide users with a near-instant experience for features like the Rahidera booking status or real-time search results.
                         </p>
                     </section>
 
@@ -94,7 +94,7 @@ const MyDeveloperStack = () => {
                             The most significant change in the 2026 developer stack isn't a new library; it's the integration of AI. I don't just use AI to write code; I use it to brainstorm architecture, debug complex performance regressions, and generate high-quality assets like the visuals you see in this blog.
                         </p>
                         <p>
-                            My workflow involves a deep synergy with LLMs. I use them to explore "what if" scenarios for system architecture and to refactor legacy code toward more modern patterns. This AI-augmented approach doesn't replace the engineer; it elevates them. It allows me to focus on the high-level logic and user impact, while the AI handles the repetitive boilerplate and initial drafting. This is how I am able to build and maintain massive platforms like TravelBuddiz while also contributing to the community through MERNStackDev.com.
+                            My workflow involves a deep synergy with LLMs. I use them to explore "what if" scenarios for system architecture and to refactor legacy code toward more modern patterns. This AI-augmented approach doesn't replace the engineer; it elevates them. It allows me to focus on the high-level logic and user impact, while the AI handles the repetitive boilerplate and initial drafting. This is how I am able to build and maintain massive platforms like Rahidera while also contributing to the community through MERNStackDev.com.
                         </p>
                     </section>
 
@@ -130,7 +130,7 @@ const MyDeveloperStack = () => {
                             The release of React 19 was a watershed moment for my stack. The introduction of the **React Compiler** (formerly Forget) has changed how I write performance-critical code. No longer am I manually optimizing with `useMemo` or `useCallback` in most cases; the compiler handles this at the build level, allowing me to focus on the semantic structure of my components.
                         </p>
                         <p>
-                            Furthermore, the new **Actions API** has revolutionized form handling. By providing a native way to manage pending states, optimistic updates, and error handling for asynchronous operations, it has significantly reduced the amount of boilerplate code in my applications. In projects like TravelBuddiz, where booking forms are complex and mission-critical, this leads to a much more resilient and developer-friendly codebase.
+                            Furthermore, the new **Actions API** has revolutionized form handling. By providing a native way to manage pending states, optimistic updates, and error handling for asynchronous operations, it has significantly reduced the amount of boilerplate code in my applications. In projects like Rahidera, where booking forms are complex and mission-critical, this leads to a much more resilient and developer-friendly codebase.
                         </p>
                     </section>
 
@@ -141,7 +141,7 @@ const MyDeveloperStack = () => {
                             While many developers use MongoDB as a simple JSON store, I treat it as a high-performance engine. My stack involves advanced indexing strategies—compound indexes, TTL indexes for session management, and geospatial indexes for trip discovery. I also utilize MongoDB’s aggregation framework to perform complex data transformations directly on the database level, reducing the processing load on my Node.js servers.
                         </p>
                         <p>
-                            For the search functionality in TravelBuddiz, I leverage **MongoDB Atlas Search**, which provides a full-text search engine based on Apache Lucene. This allows for complex queries, fuzzy matching, and autocomplete features without needing to manage a separate Elasticsearch cluster. This reduction in architectural complexity leads to higher reliability and lower maintenance costs.
+                            For the search functionality in Rahidera, I leverage **MongoDB Atlas Search**, which provides a full-text search engine based on Apache Lucene. This allows for complex queries, fuzzy matching, and autocomplete features without needing to manage a separate Elasticsearch cluster. This reduction in architectural complexity leads to higher reliability and lower maintenance costs.
                         </p>
                     </section>
 
@@ -163,7 +163,7 @@ const MyDeveloperStack = () => {
                             As we look further into 2026, the traditional "Server-Client" model is being superseded by **Edge Runtime** environments. My stack increasingly leverages the power of the edge—deploying logic to hundreds of global locations simultaneously. This means that personalization, authentication, and even some database queries happen just a few milliseconds away from the user, regardless of their physical location.
                         </p>
                         <p>
-                            Serverless 2.0 isn't just about "no servers"; it's about "zero cold starts" and "instant global scale." By utilizing platforms like Vercel Edge Functions and Cloudflare Workers, I can build applications that are as responsive as local software. This is particularly critical for TravelBuddiz, where a traveler in a remote mountain village in Sikkim needs the same snappy experience as a user in high-speed Bangalore. The architecture of the future is decentralized, and my blueprint is designed to thrive in this distributed reality.
+                            Serverless 2.0 isn't just about "no servers"; it's about "zero cold starts" and "instant global scale." By utilizing platforms like Vercel Edge Functions and Cloudflare Workers, I can build applications that are as responsive as local software. This is particularly critical for Rahidera, where a traveler in a remote mountain village in Sikkim needs the same snappy experience as a user in high-speed Bangalore. The architecture of the future is decentralized, and my blueprint is designed to thrive in this distributed reality.
                         </p>
                     </section>
 

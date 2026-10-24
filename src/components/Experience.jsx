@@ -32,7 +32,7 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
-      <div>
+      <div className="depth-card rounded-xl border border-white/[0.06] p-4 sm:p-5">
         <h3 className="text-[#8eadff] text-[24px] font-bold">
           {experience.title}
         </h3>
@@ -135,8 +135,6 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-      
-      <span id="skills"></span>
     </>
   );
 };

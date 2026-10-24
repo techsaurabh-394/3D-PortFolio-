@@ -10,7 +10,6 @@ import {
   bo2bot,
   rahidera,
   phonalyze,
-  devprep,
   mernstackdev,
   sunehriChandi,
   vittedge,
@@ -52,6 +51,27 @@ const services = [
   },
 ];
 
+const education = [
+  {
+    title: "B.Tech CSE",
+    institution: "ABES Engineering College, AKTU",
+    icon: web,
+    iconBg: "#0056d2",
+    date: "2020 - 2024",
+    tags: ["Computer Science", "Smart India Hackathon", "Meta", "AWS"],
+    metrics: [
+      { value: "Runner-up", label: "Smart India Hackathon 2022" },
+      { value: "Meta", label: "Full-Stack Certificate" },
+    ],
+    points: [
+      "Bachelor of Technology in Computer Science & Engineering",
+      "Smart India Hackathon 2022 Runner-Up",
+      "Meta Full-Stack Developer Professional Certificate",
+      "AWS Cloud Essentials Certification",
+    ],
+  },
+];
+
 const experiences = [
   {
     title: "Software Developer (Full-Stack)",
@@ -90,24 +110,6 @@ const experiences = [
     ],
     blogLink: "https://mernstackdev.com",
   },
-  {
-    title: "B.Tech CSE",
-    company_name: "ABES Engineering College, AKTU",
-    icon: web,
-    iconBg: "#0056d2",
-    date: "2020 - 2024",
-    tags: ["Computer Science", "Smart India Hackathon", "Meta", "AWS"],
-    metrics: [
-      { value: "Runner-up", label: "Smart India Hackathon 2022" },
-      { value: "Meta", label: "Full-Stack Certificate" },
-    ],
-    points: [
-      "Bachelor of Technology in Computer Science & Engineering",
-      "Smart India Hackathon 2022 Runner-Up",
-      "Meta Full-Stack Developer Professional Certificate",
-      "AWS Cloud Essentials Certification",
-    ],
-  },
 ];
 
 const metrics = [
@@ -138,7 +140,7 @@ const projects = [
   {
     name: "Rahidera",
     description:
-      "Community travel marketplace built zero to production. Features KYC verification (document + selfie), escrow payments, and OTP-confirmed trip handoffs. Onboarded 50+ early hosts and users in month one with 500+ organic visits via SEO. Evolved from TravelBuddiz into a verified local-stay and guided-travel platform.",
+      "Community travel marketplace built zero to production. Features KYC verification (document + selfie), escrow payments, and OTP-confirmed trip handoffs. Onboarded 50+ early hosts and users in month one with 500+ organic visits via SEO. Formerly known as TravelBuddiz, Rahidera is now at rahidera.com.",
     tags: [
       { name: "react", color: "blue-text-gradient" },
       { name: "node.js", color: "green-text-gradient" },
@@ -217,21 +219,6 @@ const projects = [
     projectType: "Freelance",
   },
   {
-    name: "DevPrep",
-    description:
-      "A comprehensive full-stack Interview Preparation Platform designed to help users prepare for technical interviews. Features include interview practice sessions, resume building tools, personalized career roadmaps, and community engagement. Built with MERN stack, OAuth authentication, and real-time features.",
-    tags: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "node", color: "green-text-gradient" },
-      { name: "mongodb", color: "pink-text-gradient" },
-      { name: "express", color: "violet-text-gradient" },
-      { name: "oauth", color: "orange-text-gradient" },
-    ],
-    image: devprep,
-    source_code_link: "https://github.com/techsaurabh-394/devprep",
-    live_link: "https://devprep.mernstackdev.com",
-  },
-  {
     name: "MERN Stack Dev Blog",
     description:
       "A professional tech blog with 200+ articles and 10K+ monthly readers. Features WordPress CMS, SEO optimization, responsive design, and engaging content that simplifies complex tech concepts for developers worldwide.",
@@ -277,4 +264,4 @@ const words = [
   { text: "Code", imgPath: code, font: "'Source Code Pro', monospace" },
 ];
 
-export { experiences, metrics, projects, services, socialLinks, words };
+export { education, experiences, metrics, projects, services, socialLinks, words };

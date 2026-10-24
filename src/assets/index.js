@@ -7,10 +7,8 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import devprep from "./devprep.png";
 import mernstackdev from "./mernstackdev.png";
 import onlinepuja from "./online-puja.png";
-import travelbuddiz from "./travelbuddiz.png";
 
 import bo2bot from "./projects/bo2bot.webp";
 import rahidera from "./projects/rahidera.webp";
@@ -38,10 +36,8 @@ export {
   concepts,
   designs,
   code,
-  devprep,
   mernstackdev,
   onlinepuja,
-  travelbuddiz,
   bo2bot,
   rahidera,
   phonalyze,

@@ -120,7 +120,7 @@ export const SKILLS = {
     shortDescription:
       "A utility-first CSS framework for rapidly building custom and responsive UI designs.",
     color: "#38bdf8",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   },
   nodejs: {
     id: 9,

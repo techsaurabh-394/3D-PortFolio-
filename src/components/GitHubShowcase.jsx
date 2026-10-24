@@ -20,7 +20,7 @@ const ProjectCard = ({ project, featured }) => {
 
   return (
     <article
-      className={`flex h-full flex-col rounded-2xl border border-white/10 bg-[#111522] transition duration-300 hover:-translate-y-1 hover:border-[#8ec5ff]/50 hover:shadow-[0_12px_35px_rgba(0,0,0,0.25)] motion-reduce:transform-none motion-reduce:transition-none ${
+      className={`depth-card flex h-full flex-col rounded-2xl border border-white/10 bg-[#111522] transition duration-300 hover:border-[#8ec5ff]/50 hover:shadow-[0_12px_35px_rgba(0,0,0,0.25)] motion-reduce:transform-none motion-reduce:transition-none ${
         featured ? "p-6 sm:p-7" : "p-5"
       }`}
     >

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import React from "react";
 import { Tilt } from "react-tilt";
 import { RiBriefcase4Fill } from "react-icons/ri";
@@ -7,33 +7,38 @@ import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[255px] w-full">
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-[#111522] rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img
-          src={icon}
-          alt="web-development"
-          className="w-16 h-16 object-contain"
-        />
+const ServiceCard = ({ index, title, icon }) => {
+  const prefersReducedMotion = useReducedMotion();
 
-        <h3 className="text-white text-[20px] font-bold text-center">
-          {title}
-        </h3>
-      </div>
-    </motion.div>
-  </Tilt>
-);
+  return (
+    <Tilt
+      options={{
+        max: prefersReducedMotion ? 0 : 10,
+        scale: prefersReducedMotion ? 1 : 1.02,
+        speed: prefersReducedMotion ? 0 : 350,
+      }}
+      className="xs:w-[255px] w-full"
+    >
+      <motion.div
+        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+        className="w-full green-pink-gradient rounded-[20px] p-[1px] shadow-card"
+      >
+        <div className="depth-card flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-[#111522] px-8 py-5 sm:px-12">
+          <img
+            src={icon}
+            alt=""
+            className="h-16 w-16 object-contain"
+            aria-hidden="true"
+          />
+
+          <h3 className="text-center text-[20px] font-bold text-white">
+            {title}
+          </h3>
+        </div>
+      </motion.div>
+    </Tilt>
+  );
+};
 
 const About = () => {
   return (

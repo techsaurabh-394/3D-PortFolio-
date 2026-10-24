@@ -1,15 +1,12 @@
 import React from "react";
-import {
-    About,
-    Experience,
-    Contact,
-    Blogs,
-    Hero,
-    Navbar,
-    StarsCanvas,
-    Works,
-} from "../components";
-import SkillKeyboard from "../components/SkillKeyboard";
+import About from "../components/About";
+import Experience from "../components/Experience";
+import Education from "../components/Education";
+import Contact from "../components/Contact";
+import Blogs from "../components/Blogs";
+import Hero from "../components/Hero";
+import Works from "../components/Works";
+import Skills from "../components/Skills";
 import MetricsStrip from "../components/MetricsStrip";
 import SEO from "../components/SEO";
 import GitHubShowcase from "../components/GitHubShowcase";
@@ -25,16 +22,14 @@ const Home = () => {
                 isArticle={false}
                 softwareProjects={publishedGitHubProjects}
             />
-            <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-                <Hero />
-            </div>
-            <StarsCanvas />
+            <Hero />
             <About />
             <MetricsStrip />
             <Experience />
-            <SkillKeyboard />
-            <Works />
+            <Education />
+            <Skills />
             <GitHubShowcase />
+            <Works />
             <Blogs />
             <div className="relative z-0">
                 <Contact />

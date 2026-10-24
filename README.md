@@ -6,18 +6,12 @@ Welcome to my immersive 3D portfolio website! This project showcases my skills, 
 
 ## ✨ Features
 
-### 🎮 Interactive 3D Elements
-
-- **Custom 3D Keyboard**: Interactive Spline-powered keyboard with skills as keycaps that reveal titles and descriptions on hover
-- **3D Models**: Desktop PC, Earth, and other 3D assets using Three.js and React Three Fiber
-- **Particle Systems**: Dynamic star field background creating an immersive space environment
-- **Elastic Cursor**: Custom cursor with physics-based animations for enhanced interactivity
-
 ### 🎨 Visual & Animation
 
-- **Smooth Animations**: Powered by GSAP and Framer Motion for fluid scroll animations, hover effects, and element reveals
-- **Space Theme**: Dark cosmic background with particle effects and stellar animations
-- **Preloader**: Engaging loading screen with custom animations
+- **Responsive hero**: Interactive 3D desktop with a compact introduction
+- **On-demand 3D Earth**: Loaded only when the contact section approaches the viewport
+- **Smooth Animations**: Framer Motion for subtle scroll reveals and hover effects
+- **Dark visual theme**: Consistent styling across portfolio sections
 - **Easter Eggs**: Hidden interactive elements for curious visitors
 
 ### 📱 Responsive Design
@@ -31,9 +25,10 @@ Welcome to my immersive 3D portfolio website! This project showcases my skills, 
 - **Hero**: Eye-catching introduction with 3D elements
 - **About**: Personal story and background
 - **Experience**: Timeline of professional experience and roles
-- **Skills**: Interactive 3D keyboard showcasing technical skills
-- **Projects**: Portfolio of work with 3D project cards
+- **Education**: Academic background, achievements, and certifications
+- **Skills**: Categorized directory of all listed technical skills with technology icons and scroll reveals
 - **GitHub Showcase**: Published open-source repositories with optional build-time GitHub stats
+- **Projects**: Selected products followed by freelance and client work
 - **Blogs**: Latest blog posts from mernstackdev.com via WordPress API
 - **Contact**: Interactive contact form with 3D elements
 
@@ -50,7 +45,6 @@ Welcome to my immersive 3D portfolio website! This project showcases my skills, 
 - **Three.js** - 3D graphics library
 - **React Three Fiber** - React renderer for Three.js
 - **React Three Drei** - Useful helpers for React Three Fiber
-- **Spline Runtime** - Interactive 3D design tool integration
 - **Maath** - Mathematical utilities for 3D graphics
 
 ### Styling & UI
@@ -148,9 +142,7 @@ src/
 ├── components/          # React components
 │   ├── canvas/         # 3D canvas components
 │   │   ├── Ball.jsx
-│   │   ├── Computers.jsx
 │   │   ├── Earth.jsx
-│   │   └── Stars.jsx
 │   ├── preloader/      # Loading screen
 │   ├── ui/            # UI components
 │   ├── About.jsx
@@ -160,7 +152,7 @@ src/
 │   ├── ElasticCursor.jsx
 │   ├── Hero.jsx
 │   ├── Navbar.jsx
-│   ├── SkillKeyboard.jsx
+│   ├── Skills.jsx
 │   ├── GitHubShowcase.jsx
 │   └── Works.jsx
 ├── data/
@@ -283,10 +275,9 @@ For detailed instructions, check EmailJS documentation.
 
 ## 🎯 Projects Showcased
 
-- **DevPrep** - Interview preparation platform (MERN Stack)
 - **MERN Stack Dev Blog** - Tech blog at mernstackdev.com
 - **Online Puja Booking** - Vedic Pandit booking platform
-- **TravelBuddiz** - Travel group platform
+- **Rahidera** (formerly TravelBuddiz) - Local travel marketplace at rahidera.com
 
 ## 🛠️ Technical Skills
 
@@ -336,7 +327,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **Spline** for 3D design tools
 - **Three.js** community for 3D graphics
 - **GSAP** for powerful animations
 - **Framer Motion** for React animations
