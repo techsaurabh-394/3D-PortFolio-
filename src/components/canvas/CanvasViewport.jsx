@@ -8,7 +8,7 @@ const CanvasViewport = ({ children, className = "", label }) => {
     const viewport = viewportRef.current;
     if (!viewport) return;
 
-    const isNarrow = window.matchMedia("(max-width: 360px)").matches;
+    const isNarrow = window.matchMedia("(max-width: 320px)").matches;
     const hasLowMemory = (navigator.deviceMemory ?? 8) <= 2;
     const hasLowCoreCount = (navigator.hardwareConcurrency ?? 8) <= 2;
     if (isNarrow || hasLowMemory || hasLowCoreCount) return;

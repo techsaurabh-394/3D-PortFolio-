@@ -257,18 +257,15 @@ For detailed instructions, check EmailJS documentation.
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+### Firebase Hosting
 
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Add environment variables in Vercel dashboard
-4. Vercel will automatically deploy your site
+1. Build the site with `npm run build`.
+2. Deploy to the configured Firebase project with `firebase deploy --only hosting --project saurabh-dev-4a9ce`.
 
 ### Other Platforms
 
 - **GitHub Pages**: Deploy using GitHub Actions
-- **Firebase Hosting**: Use Firebase CLI
-- **Netlify**: Connect GitHub repo and add environment variables
+- **Vercel**: Connect the repository and configure environment variables
 - **AWS S3**: Upload built files to S3 bucket
 
 **Important:** Don't forget to add environment variables in your hosting platform's dashboard!

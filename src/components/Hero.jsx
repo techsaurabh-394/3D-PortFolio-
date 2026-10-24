@@ -6,7 +6,7 @@ import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
-  const typedItems = ["AI Engineer", "Full-Stack Developer", "AI Agents & MCP", "Tech-Blogger"];
+  const typedItems = ["AI Engineer", "Full-Stack Developer", "AI Agents & MCP Builder", "Tech-Blogger"];
   const [itemIndex, setItemIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
@@ -33,24 +33,23 @@ const Hero = () => {
   }, [charIndex, itemIndex]);
 
   return (
-    <section className="relative mx-auto h-screen min-h-[1020px] w-full sm:min-h-0" id="hero">
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-0 w-[72%] lg:w-[64%]">
+    <section
+      className="relative isolate mx-auto h-[min(100svh,1000px)] min-h-[780px] w-full overflow-hidden"
+      id="hero"
+    >
+      <div className="absolute inset-x-0 bottom-[72px] top-[300px] z-0 w-full sm:top-[270px]">
         <ComputersCanvas />
       </div>
       <div
-        className={`absolute inset-0 top-[120px] z-10 mx-auto flex max-w-7xl flex-row items-start gap-5 ${styles.paddingX}`}
+        className={`absolute inset-x-0 top-[105px] z-10 mx-auto flex max-w-5xl flex-col items-center px-4 text-center ${styles.paddingX}`}
       >
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
-        </div>
-
-        <div className="w-full sm:w-[62%] lg:w-[58%]">
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Saurabh Pathak</span>
+        <div className="w-full">
+          <h1 className="text-4xl font-black leading-tight text-white xs:text-5xl sm:text-6xl lg:text-7xl">
+            <span className="block">Hi, I'm</span>
+            <span className="mt-1 block text-[#915EFF]">Saurabh Pathak</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm{" "}
+          <p className="mt-3 text-base font-medium leading-7 text-[#dfd9ff] xs:text-lg sm:text-xl">
+            <span>I'm </span>
             <span
               className="typed"
               aria-hidden="true"
@@ -66,31 +65,30 @@ const Hero = () => {
             >
               {typedText}
             </span>
-            <span 
-              className="typed-cursor" 
-              aria-hidden="true"
-            >
+            <span className="typed-cursor" aria-hidden="true">
               |
             </span>
-            <br />
-            <b>Building intelligent systems that ship — from AI agents to production apps.</b>
+            <span className="mt-2 block text-sm font-semibold leading-6 text-white xs:text-base sm:text-lg">
+              Building intelligent systems that ship — from AI agents to
+              production apps.
+            </span>
           </p>
         </div>
       </div>
 
-      <div className="absolute bottom-32 left-6 z-10 flex items-center justify-center xs:bottom-10 xs:left-0 xs:w-full">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+      <div className="absolute bottom-4 left-0 z-10 flex w-full justify-center">
+        <a href="#about" aria-label="Scroll to the About section">
+          <div className="flex h-[52px] w-[30px] items-start justify-center rounded-3xl border-2 border-secondary p-1.5">
             <motion.div
               animate={{
-                y: [0, 24, 0],
+                y: [0, 16, 0],
               }}
               transition={{
-                duration: 1.5,
+                duration: 1.7,
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
+              className="mb-1 h-2.5 w-2.5 rounded-full bg-secondary"
             />
           </div>
         </a>

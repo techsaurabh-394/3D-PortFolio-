@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { useReducedMotion } from "framer-motion";
 
 import CanvasLoader from "../Loader";
 import CanvasViewport from "./CanvasViewport";
@@ -34,6 +35,8 @@ const Computers = ({ isMobile }) => {
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
   const isSmallScreen = useMediaQuery("(max-width: 640px)");
+  const prefersReducedMotion = useReducedMotion();
+  const autoRotate = !prefersReducedMotion;
 
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -59,7 +62,7 @@ const ComputersCanvas = () => {
   return (
     <CanvasViewport label="Computer desk">
       <Canvas
-        frameloop='demand'
+        frameloop={autoRotate ? "always" : "demand"}
         shadows
         dpr={isSmallScreen ? 1 : [1, 1.5]}
         camera={{ position: [20, 3, 5], fov: 25 }}
@@ -68,6 +71,9 @@ const ComputersCanvas = () => {
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}
+            enablePan={false}
+            autoRotate={autoRotate}
+            autoRotateSpeed={0.55}
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
           />
