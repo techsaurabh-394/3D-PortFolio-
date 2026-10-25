@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 
 const siteUrl = "https://saurabh.mernstackdev.com";
 const siteName = "Saurabh Pathak | AI Engineer & Full-Stack Developer";
+const portraitUrl = `${siteUrl}/saurabh-pathak.jpg`;
 const socialProfiles = [
   "https://github.com/techsaurabh-394",
   "https://x.com/Saurabh23272258",
@@ -25,7 +26,7 @@ const SEO = ({
     name: "Saurabh Pathak",
     jobTitle: "AI Engineer & Full-Stack Developer",
     url: siteUrl,
-    image: imageUrl,
+    image: portraitUrl,
     email: "saurabhpathak394@gmail.com",
     sameAs: socialProfiles,
     knowsAbout: [

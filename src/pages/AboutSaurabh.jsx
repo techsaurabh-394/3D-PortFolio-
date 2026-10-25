@@ -4,7 +4,6 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { textVariant, fadeIn } from "../utils/motion";
 import SEO from "../components/SEO";
-import saurabhPortrait from "../assets/saurabh-pathak.jpg";
 
 const AboutSaurabh = () => {
     return (
@@ -43,7 +42,7 @@ const AboutSaurabh = () => {
                     {/* IMAGE SECTION */}
                     <div className="w-full h-[300px] md:h-[500px] bg-[#111522] rounded-3xl overflow-hidden shadow-2xl relative group border border-white/10">
                         <img
-                            src={saurabhPortrait}
+                            src="/saurabh-pathak.jpg"
                             alt="Saurabh Pathak outdoors in the mountains"
                             width="900"
                             height="1200"
