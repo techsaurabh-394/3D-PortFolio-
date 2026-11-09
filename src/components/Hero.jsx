@@ -12,24 +12,26 @@ const Hero = () => {
   const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
-    const typeItem = () => {
-      if (charIndex < typedItems[itemIndex].length) {
-        setTypedText((prevText) => prevText + typedItems[itemIndex][charIndex]);
-        setCharIndex(charIndex + 1);
-      } else {
-        setIsTyping(false);
-        setTimeout(() => {
-          setIsTyping(true);
-          setItemIndex((itemIndex + 1) % typedItems.length);
-          setCharIndex(0);
-          setTypedText("");
-        }, 1000); // Delay before typing the next item
-      }
-    };
+    const currentItem = typedItems[itemIndex];
 
-    const typingInterval = setInterval(typeItem, 100); // Typing speed
+    if (charIndex < currentItem.length) {
+      setIsTyping(true);
+      const typingTimeout = setTimeout(() => {
+        setTypedText(currentItem.slice(0, charIndex + 1));
+        setCharIndex((prevIndex) => prevIndex + 1);
+      }, 100);
 
-    return () => clearInterval(typingInterval);
+      return () => clearTimeout(typingTimeout);
+    }
+
+    setIsTyping(false);
+    const pauseTimeout = setTimeout(() => {
+      setItemIndex((prevIndex) => (prevIndex + 1) % typedItems.length);
+      setCharIndex(0);
+      setTypedText("");
+    }, 1200);
+
+    return () => clearTimeout(pauseTimeout);
   }, [charIndex, itemIndex]);
 
   return (
@@ -65,7 +67,12 @@ const Hero = () => {
             >
               {typedText}
             </span>
-            <span className="typed-cursor" aria-hidden="true">
+            <span
+              className={`typed-cursor inline-block w-[0.65ch] text-[#915EFF] transition-opacity duration-150 ${
+                isTyping ? "opacity-100 animate-pulse" : "opacity-0"
+              }`}
+              aria-hidden="true"
+            >
               |
             </span>
             <span className="mt-2 block text-sm font-semibold leading-6 text-white xs:text-base sm:text-lg">

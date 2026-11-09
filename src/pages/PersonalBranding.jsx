@@ -24,8 +24,7 @@ const PersonalBranding = () => {
 
                 <motion.div
                     initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.1 }}
+                    animate="show"
                     variants={fadeIn("", "", 0.1, 1)}
                     className="mt-4 text-[#dfd9ff] text-[18px] leading-[32px] space-y-12 text-justify font-light"
                 >
@@ -118,7 +117,7 @@ const PersonalBranding = () => {
                             Personal branding is essentially the engineering of trust. In a world of "AI-generated noise," depth is the only differentiator. When I commit to writing a 2000-word article, I’m not just trying to satisfy a search algorithm; I’m signaling to the reader that I have the attention span and the intellectual rigor to tackle complex problems.
                         </p>
                         <p>
-                            This is the psychological "halo effect." If someone reads an exhaustive guide I've written on system architecture, they are far more likely to trust my judgement on a freelance project or a startup partnership. Authority is not something you claim; it's something you demonstrate through consistent, high-value output. My brand is built on the principle of "radical helpfulness."
+                            This is the psychological "halo effect." If someone reads an exhaustive guide I've written on system architecture, they are far more likely to trust my judgement on an engineering project or a startup partnership. Authority is not something you claim; it's something you demonstrate through consistent, high-value output. My brand is built on the principle of "radical helpfulness."
                         </p>
                     </section>
 
@@ -162,14 +161,14 @@ const PersonalBranding = () => {
                             Personal branding is a journey, not a destination. Whether you are a founder looking for a technical partner, a developer looking for mentorship, or an engineering leader looking to discuss the future of the web, I’m always open to new connections and collaborations.
                         </p>
                         <div className="flex flex-wrap gap-6 mt-8 justify-center md:justify-start">
-                            <a href="https://linkedin.com/in/tech-saurabh/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 rounded-full text-white font-bold hover:bg-blue-700 transition-all">
+                            <a href="https://www.linkedin.com/in/tech-saurabh/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 rounded-full text-white font-bold hover:bg-blue-700 transition-all">
                                 LinkedIn Authority
                             </a>
                             <a href="https://instagram.com/saurabh.pathak__" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white font-bold hover:opacity-90 transition-all">
                                 Instagram Insights
                             </a>
-                            <a href="https://x.com/mernstackdev01" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-black rounded-full text-white font-bold hover:bg-zinc-900 transition-all border border-white/20">
-                                Follow on X
+                            <a href="https://github.com/techsaurabh-394" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-[#161b22] rounded-full text-white font-bold hover:bg-[#24292f] transition-all border border-white/20">
+                                Follow on GitHub
                             </a>
                         </div>
                     </section>

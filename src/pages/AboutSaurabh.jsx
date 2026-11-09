@@ -23,8 +23,7 @@ const AboutSaurabh = () => {
 
                 <motion.div
                     initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.1 }}
+                    animate="show"
                     variants={fadeIn("", "", 0.1, 1)}
                     className="mt-4 text-[#dfd9ff] text-[18px] leading-[32px] space-y-12 text-justify font-light"
                 >
@@ -32,7 +31,7 @@ const AboutSaurabh = () => {
                     <section id="introduction" className="space-y-6">
                         <h2 className="text-white text-3xl font-bold border-b border-white/10 pb-4 tracking-tight">The Visionary at the Intersection of Code and Connection</h2>
                         <p>
-                            In the rapidly evolving landscape of 2026, where the lines between the digital and physical worlds are increasingly blurred, Saurabh Pathak stands as more than just a software engineer. He is a builder, a founder, and a digital architect dedicated to one primary goal: creating technology that fosters genuine human connection. Based in the heart of India's thriving tech ecosystem, Saurabh has carved a unique niche for himself as a Software Development Engineer (SDE), freelance consultant, and a thought leader in the MERN and Next.js communities.
+                            In the rapidly evolving landscape of 2026, where the lines between the digital and physical worlds are increasingly blurred, Saurabh Pathak stands as more than just a software engineer. He is a builder, a founder, and a digital architect dedicated to one primary goal: creating technology that fosters genuine human connection. Based in the heart of India's thriving tech ecosystem, Saurabh has carved a unique niche for himself as a Software Development Engineer (SDE), open-source builder, and a thought leader in the MERN and Next.js communities.
                         </p>
                         <p>
                             His journey is not one of linear progression but of iterative discovery. From his early days of curiosity about the fundamental logic of the web to his current role as the visionary behind <span className="text-[#8ec5ff] font-bold">Rahidera</span>, Saurabh’s professional identity is defined by a relentless drive to solve complex problems through elegant, scalable, and highly performant solutions. Whether he is optimizing a React component for 60FPS animations, architecting a secure backend with Node.js, or documenting complex architectural patterns on <a href="https://mernstackdev.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline font-medium">mernstackdev.com</a>, his work is underpinned by a commitment to excellence and a deep understanding of user psychology.
@@ -90,19 +89,6 @@ const AboutSaurabh = () => {
                         </p>
                     </section>
 
-                    {/* SECTION 5: THE FREELANCE SPIRIT & THE POWER OF VERSATILITY */}
-                    <section id="freelance" className="space-y-6">
-                        <h2 className="text-white text-3xl font-bold border-b border-white/10 pb-4 tracking-tight">The Freelance Spirit: Navigating the Digital Frontier</h2>
-                        <p>
-                            Parallel to his corporate career, Saurabh has always maintained a vibrant freelance consulting practice. This aspect of his journey has allowed him to work on an incredibly diverse range of projects, from helping startups launch their MVPs to consulting for established brands on their digital transformation strategies. The freelance life has instilled in him a high degree of versatility and a "product-first" mentality.
-                        </p>
-                        <p>
-                            As a freelancer, Saurabh isn't just a coder; he is a technical partner. He works closely with founders to understand their vision and then translates that vision into a technical roadmap. This experience has been invaluable in teaching him the business side of technology—balancing budget constraints with technical requirements and ensuring that every line of code adds direct value to the end-user.
-                        </p>
-                        <p>
-                            His freelance work has covered everything from custom CMS development to building sophisticated AI-powered dashboards. It is this breadth of experience that allows him to bring a fresh perspective to every project he undertakes. He understands that there is no "one-size-fits-all" solution in technology and that the best decisions are made at the intersection of technical feasibility and business necessity.
-                        </p>
-                    </section>
 
                     {/* SECTION 6: RAHIDERA - THE FOUNDER'S JOURNEY */}
                     <section id="rahidera" className="space-y-6">
@@ -183,14 +169,14 @@ const AboutSaurabh = () => {
                             If you’re looking for a technical partner to bring your vision to life, a mentor to help you navigate the world of MERN stack, or if you just want to discuss the latest trends in software engineering, my door is always open. Saurabh is active across social platforms and always eager to collaborate on innovative projects.
                         </p>
                         <div className="flex flex-wrap gap-6 mt-8 justify-center md:justify-start">
-                            <a href="https://linkedin.com/in/tech-saurabh/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 rounded-full text-white font-bold hover:bg-blue-700 transition-all flex items-center gap-2">
+                            <a href="https://www.linkedin.com/in/tech-saurabh/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 rounded-full text-white font-bold hover:bg-blue-700 transition-all flex items-center gap-2">
                                 LinkedIn Professional
                             </a>
                             <a href="https://instagram.com/saurabh.pathak__" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white font-bold hover:opacity-90 transition-all flex items-center gap-2">
                                 Instagram Journey
                             </a>
-                            <a href="https://x.com/mernstackdev01" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-black rounded-full text-white font-bold hover:bg-zinc-900 transition-all flex items-center gap-2 border border-white/20">
-                                Follow on X
+                            <a href="https://github.com/techsaurabh-394" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-[#161b22] rounded-full text-white font-bold hover:bg-[#24292f] transition-all flex items-center gap-2 border border-white/20">
+                                Follow on GitHub
                             </a>
                         </div>
                     </section>

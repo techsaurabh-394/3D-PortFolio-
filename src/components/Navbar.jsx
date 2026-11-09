@@ -10,6 +10,11 @@ const NAV_LINKS = [
     img: "/assets/nav-link-previews/home1.png",
   },
   {
+    title: "project",
+    href: "/#projects",
+    img: "/assets/nav-link-previews/projects1.png",
+  },
+  {
     title: "experience",
     href: "/#experience",
     img: "/assets/nav-link-previews/experience.png",
@@ -27,11 +32,6 @@ const NAV_LINKS = [
   {
     title: "github",
     href: "/#github",
-    img: "/assets/nav-link-previews/projects1.png",
-  },
-  {
-    title: "project",
-    href: "/#projects",
     img: "/assets/nav-link-previews/projects1.png",
   },
   {

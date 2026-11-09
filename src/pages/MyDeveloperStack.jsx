@@ -24,8 +24,7 @@ const MyDeveloperStack = () => {
 
                 <motion.div
                     initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.1 }}
+                    animate="show"
                     variants={fadeIn("", "", 0.1, 1)}
                     className="mt-4 text-[#dfd9ff] text-[18px] leading-[32px] space-y-12 text-justify font-light"
                 >
@@ -178,11 +177,11 @@ const MyDeveloperStack = () => {
                         </p>
 
                         <div className="flex flex-wrap gap-6 mt-8 justify-center md:justify-start">
-                            <a href="https://linkedin.com/in/tech-saurabh/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 rounded-full text-white font-bold hover:bg-blue-700 transition-all">
+                            <a href="https://www.linkedin.com/in/tech-saurabh/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 rounded-full text-white font-bold hover:bg-blue-700 transition-all">
                                 LinkedIn Professional
                             </a>
-                            <a href="https://x.com/mernstackdev01" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-black rounded-full text-white font-bold hover:bg-zinc-900 transition-all border border-white/20">
-                                Follow on X
+                            <a href="https://github.com/techsaurabh-394" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-[#161b22] rounded-full text-white font-bold hover:bg-[#24292f] transition-all border border-white/20">
+                                Follow on GitHub
                             </a>
                         </div>
                     </section>

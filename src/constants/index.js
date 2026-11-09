@@ -11,16 +11,17 @@ import {
   rahidera,
   phonalyze,
   mernstackdev,
-  sunehriChandi,
-  vittedge,
-  tayalFinvest,
-  onlinePujaSamagri,
+  haatGateway,
 } from "../assets";
 
 export const navLinks = [
   {
     id: "about",
     title: "About",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "experience",
@@ -166,57 +167,18 @@ const projects = [
     live_link: "https://tool.phonalyze.com",
   },
   {
-    name: "Sunehri Chandi Co",
+    name: "Haat Gateway",
     description:
-      "Freelance e-commerce project for a handcrafted jewellery brand, showcasing 925 silver, moissanite, polki and cubic zirconia collections with custom-order enquiries.",
+      "Open-source gateway that lets personal AI agents shop from sellers on ONDC, India's open commerce network, in Hinglish and 11 Indian languages. Bridges the Personal Agent Protocol (Poppy) and Beckn, and never places an order without the person's approval. Approved orders run at most once, even across restarts. 126 automated tests pass, plus 99/99 checks on the official Poppy validator.",
     tags: [
-      { name: "E-commerce", color: "blue-text-gradient" },
-      { name: "Jewellery", color: "pink-text-gradient" },
-      { name: "Custom Orders", color: "orange-text-gradient" },
+      { name: "typescript", color: "blue-text-gradient" },
+      { name: "node.js", color: "green-text-gradient" },
+      { name: "ondc/beckn", color: "pink-text-gradient" },
+      { name: "ai agents", color: "violet-text-gradient" },
     ],
-    image: sunehriChandi,
-    live_link: "https://sunehrichandi.com",
-    projectType: "Freelance",
-  },
-  {
-    name: "Vittedge Technologies",
-    description:
-      "Freelance website project for a financial-distribution software company, presenting its WealthCRM for financial advisors and Agent CRM for recruiting and growing advisor networks.",
-    tags: [
-      { name: "WealthTech", color: "blue-text-gradient" },
-      { name: "CRM", color: "green-text-gradient" },
-      { name: "Financial Services", color: "violet-text-gradient" },
-    ],
-    image: vittedge,
-    live_link: "https://vittedge.co.in",
-    projectType: "Freelance",
-  },
-  {
-    name: "Tayal Finvest Services",
-    description:
-      "Freelance website project for a financial-services firm, presenting goal-based financial planning, wealth creation and protection strategies.",
-    tags: [
-      { name: "Fintech", color: "blue-text-gradient" },
-      { name: "Financial Planning", color: "green-text-gradient" },
-      { name: "Wealth Management", color: "violet-text-gradient" },
-    ],
-    image: tayalFinvest,
-    live_link: "https://tayalfinvest.com/",
-    projectType: "Freelance",
-  },
-  {
-    name: "Online Puja — Pandit Ajay Pathak",
-    description:
-      "Freelance mobile-friendly puja-samagri guide featuring 15 Vedic ceremony checklists, downloadable PDFs and installable PWA support for quick access.",
-    tags: [
-      { name: "HTML", color: "orange-text-gradient" },
-      { name: "CSS", color: "blue-text-gradient" },
-      { name: "JavaScript", color: "orange-text-gradient" },
-      { name: "PWA", color: "violet-text-gradient" },
-    ],
-    image: onlinePujaSamagri,
-    source_code_link: "https://github.com/techsaurabh-394/pandit-ajay-pathak-puja",
-    projectType: "Freelance",
+    image: haatGateway,
+    source_code_link: "https://github.com/techsaurabh-394/haat-gateway",
+    live_link: "https://techsaurabh-394.github.io/haat-gateway/",
   },
   {
     name: "MERN Stack Dev Blog",

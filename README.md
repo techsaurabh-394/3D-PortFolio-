@@ -28,7 +28,7 @@ Welcome to my immersive 3D portfolio website! This project showcases my skills, 
 - **Education**: Academic background, achievements, and certifications
 - **Skills**: Categorized directory of all listed technical skills with technology icons and scroll reveals
 - **GitHub Showcase**: Published open-source repositories with optional build-time GitHub stats
-- **Projects**: Selected products followed by freelance and client work
+- **Projects**: Selected products and open-source projects
 - **Blogs**: Latest blog posts from mernstackdev.com via WordPress API
 - **Contact**: Interactive contact form with 3D elements
 
@@ -273,7 +273,7 @@ For detailed instructions, check EmailJS documentation.
 ## 🎯 Projects Showcased
 
 - **MERN Stack Dev Blog** - Tech blog at mernstackdev.com
-- **Online Puja Booking** - Vedic Pandit booking platform
+- **Haat Gateway** - Open-source ONDC gateway for personal AI agents
 - **Rahidera** (formerly TravelBuddiz) - Local travel marketplace at rahidera.com
 
 ## 🛠️ Technical Skills

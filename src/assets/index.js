@@ -8,15 +8,11 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import mernstackdev from "./mernstackdev.png";
-import onlinepuja from "./online-puja.png";
 
 import bo2bot from "./projects/bo2bot.webp";
 import rahidera from "./projects/rahidera.webp";
 import phonalyze from "./projects/phonalyze.webp";
-import sunehriChandi from "./projects/sunehri-chandi.webp";
-import vittedge from "./projects/vittedge.webp";
-import tayalFinvest from "./projects/tayal-finvest.webp";
-import onlinePujaSamagri from "./projects/online-puja-samagri.webp";
+import haatGateway from "./projects/haat-gateway.webp";
 
 import code from "./badge/code.svg";
 import concepts from "./badge/concepts.svg";
@@ -37,12 +33,8 @@ export {
   designs,
   code,
   mernstackdev,
-  onlinepuja,
   bo2bot,
   rahidera,
   phonalyze,
-  sunehriChandi,
-  vittedge,
-  tayalFinvest,
-  onlinePujaSamagri,
+  haatGateway,
 };

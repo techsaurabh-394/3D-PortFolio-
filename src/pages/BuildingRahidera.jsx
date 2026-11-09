@@ -24,8 +24,7 @@ const BuildingRahidera = () => {
 
                 <motion.div
                     initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.1 }}
+                    animate="show"
                     variants={fadeIn("", "", 0.1, 1)}
                     className="mt-4 text-[#dfd9ff] text-[18px] leading-[32px] space-y-12 text-justify font-light"
                 >
@@ -139,7 +138,7 @@ const BuildingRahidera = () => {
                         </p>
 
                         <div className="flex flex-wrap gap-6 mt-8 justify-center md:justify-start">
-                            <a href="https://linkedin.com/in/tech-saurabh/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 rounded-full text-white font-bold hover:bg-blue-700 transition-all">
+                            <a href="https://www.linkedin.com/in/tech-saurabh/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 rounded-full text-white font-bold hover:bg-blue-700 transition-all">
                                 Follow the Startup Path
                             </a>
                             <a href="https://mernstackdev.com" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-zinc-800 rounded-full text-white font-bold hover:bg-zinc-700 transition-all border border-white/10">
