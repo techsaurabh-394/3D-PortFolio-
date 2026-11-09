@@ -1,5 +1,16 @@
 export const githubProjects = [
   {
+    name: "haat-gateway",
+    repo: "techsaurabh-394/haat-gateway",
+    tagline: "ONDC gateway for personal AI agents",
+    description:
+      "Open-source gateway that lets personal AI agents shop from sellers on ONDC in Hinglish and 11 Indian languages with human approval and at-most-once execution.",
+    stack: ["TypeScript", "Node.js", "ONDC/Beckn", "Poppy"],
+    topics: ["ondc", "beckn", "ai-agents", "open-source"],
+    featured: true,
+    published: true,
+  },
+  {
     name: "mcp-safe-actions",
     repo: "techsaurabh-394/mcp-safe-actions",
     tagline: "Human approval for destructive MCP tools",

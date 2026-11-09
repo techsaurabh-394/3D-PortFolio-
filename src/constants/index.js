@@ -12,6 +12,7 @@ import {
   phonalyze,
   mernstackdev,
   haatGateway,
+  mcpSafeActions,
 } from "../assets";
 
 export const navLinks = [
@@ -179,6 +180,22 @@ const projects = [
     image: haatGateway,
     source_code_link: "https://github.com/techsaurabh-394/haat-gateway",
     live_link: "https://techsaurabh-394.github.io/haat-gateway/",
+    projectType: "Open Source",
+  },
+  {
+    name: "mcp-safe-actions",
+    description:
+      "Open-source TypeScript library that makes AI agents wait for human approval before running destructive MCP tools. Features MCP elicitation, expiring tokens bound to arguments, zero raw-argument logging, and 49 automated tests with 100% coverage.",
+    tags: [
+      { name: "typescript", color: "blue-text-gradient" },
+      { name: "mcp", color: "pink-text-gradient" },
+      { name: "ai-agents", color: "green-text-gradient" },
+      { name: "testing", color: "violet-text-gradient" },
+    ],
+    image: mcpSafeActions,
+    source_code_link: "https://github.com/techsaurabh-394/mcp-safe-actions",
+    live_link: "https://github.com/techsaurabh-394/mcp-safe-actions",
+    projectType: "Open Source",
   },
   {
     name: "MERN Stack Dev Blog",

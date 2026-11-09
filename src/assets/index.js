@@ -13,6 +13,7 @@ import bo2bot from "./projects/bo2bot.webp";
 import rahidera from "./projects/rahidera.webp";
 import phonalyze from "./projects/phonalyze.webp";
 import haatGateway from "./projects/haat-gateway.webp";
+import mcpSafeActions from "./projects/mcp-safe-actions.png";
 
 import code from "./badge/code.svg";
 import concepts from "./badge/concepts.svg";
@@ -37,4 +38,5 @@ export {
   rahidera,
   phonalyze,
   haatGateway,
+  mcpSafeActions,
 };

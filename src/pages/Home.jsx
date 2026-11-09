@@ -26,10 +26,10 @@ const Home = () => {
             <About />
             <MetricsStrip />
             <Works />
+            <GitHubShowcase />
             <Experience />
             <Education />
             <Skills />
-            <GitHubShowcase />
             <Blogs />
             <div className="relative z-0">
                 <Contact />
