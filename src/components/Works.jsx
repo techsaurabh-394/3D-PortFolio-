@@ -35,10 +35,12 @@ const ProjectCard = ({
             scale: 1,
             speed: 350,
           }}
-                ? "ring-2 ring-[#8ec5ff]/60 shadow-[0_0_30px_rgba(142,197,255,0.15)]"
-                : ""
-              }`}
-      >
+          className={`bg-[#111522] p-5 rounded-2xl w-full flex flex-col justify-between relative ${
+            featured
+              ? "ring-2 ring-[#8ec5ff]/60 shadow-[0_0_30px_rgba(142,197,255,0.15)]"
+              : ""
+          }`}
+        >
         <div>
           {/* Featured Badge */}
           {featured && (
